@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica DOM</title>
+    <script src="src/js/script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de produto</h1>
+        <div id="produtos">
+            <label>Produtos:</label>
+            <input type="text" name="produtos" id="produtos">
+            <br><br>
+            <label>Valor do produto: </label>
+            <input type="text" name="valor" id="valor">
+            <br><br>
+            <button type="button" onclick="cadastrarProdutos(this.parentNode)">Adicionar ao Carrinho</button>
+            
+        </div>
+    </div>
+    <h1>Ver Produtos no Carrinho</h1>
+    <button type="button" onclick="verCarrinho()">Carrinho</button>
+    <div class="carrinho"></div>
+</body>
+</html>
