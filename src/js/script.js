@@ -9,24 +9,26 @@ function cadastrarProdutos(event) {
    
     document.querySelector('input[name="produtos"]').value = ""
     document.getElementById("valor").value = ""
-    
-    console.log(id,arrayProdutos)
+    arrayProdutos = ""
 }
 
 function verCarrinho() {
     const pProduto = document.createElement('p')
     const vProduto = document.createElement('p')
     const btn = document.createElement('button')
+    const li = document.createElement('li')
+    li.id = 'li'
     btn.type = "button"
     btn.innerText = "Remover"
     arrayProdutos.map((devolverValor) => {
         pProduto.innerText = devolverValor.produto
         vProduto.innerText = devolverValor.valorProduto
-        document.querySelector('.carrinho').append(pProduto,vProduto, btn)
+        li.append(pProduto, vProduto, btn)
+        document.querySelector('.carrinho').appendChild(li)
         
     })
    btn.addEventListener('click', () => {
-        document.querySelector('.carrinho').removeChild(arrayProdutos[arrayProdutos.length -1])
+        document.querySelector('.carrinho').removeChild(li)
    })
     
     
